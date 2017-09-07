@@ -1,5 +1,5 @@
 {
-  "name": "api.da-mi",
+  "name": "api.pigeon-club",
   "version": "1.0.0",
   "description": "Back-end",
   "main": "app.js",
@@ -7,11 +7,15 @@
     "test": "test"
   },
   "dependencies": {
-   
+    "clean-webpack-plugin": "^0.1.16",
+    "path": "^0.12.7",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.8.0",
+    "webpack": "^3.5.6",
+    "webpack-node-externals": "^1.6.0"
   },
-  "devDependencies": {
-   
-  },
+  "devDependencies": {},
   "scripts": {
     "build:prod": "NODE_ENV=production webpack -p --config ./webpack/webpack.config.prod.js",
     "start:dev": "webpack-dev-server --hot --inline --config ./webpack/webpack.config.dev.js",
@@ -21,13 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lv-237-NodeJS/api.da-mi.git"
+    "url": "git+https://github.com/yarvanya/api.pigeon-club.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ivan Yarymovych",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lv-237-NodeJS/api.da-mi/issues"
+    "url": "https://github.com/yarvanya/api.pigeon-club/issues"
   },
-  "homepage": "https://github.com/Lv-237-NodeJS/api.da-mi#readme"
+  "homepage": "https://github.com/yarvanya/api.pigeon-club"
 }
