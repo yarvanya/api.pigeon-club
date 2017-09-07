@@ -1,0 +1,33 @@
+{
+  "name": "api.da-mi",
+  "version": "1.0.0",
+  "description": "Back-end",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+   
+  },
+  "scripts": {
+    "build:prod": "NODE_ENV=production webpack -p --config ./webpack/webpack.config.prod.js",
+    "start:dev": "webpack-dev-server --hot --inline --config ./webpack/webpack.config.dev.js",
+    "start:prod": "npm run build:prod && node server.js",
+    "test": "NODE_ENV=test jasmine-node --verbose --test-dir test --color --watch",
+    "coverage": "NODE_ENV=test istanbul cover --report=text --report lcov jasmine-node --verbose test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lv-237-NodeJS/api.da-mi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lv-237-NodeJS/api.da-mi/issues"
+  },
+  "homepage": "https://github.com/Lv-237-NodeJS/api.da-mi#readme"
+}
