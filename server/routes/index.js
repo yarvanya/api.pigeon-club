@@ -1,5 +1,5 @@
+const { userController } = require('../controllers');
+
 module.exports = app => {
-  app.get('/api', (req, res) => res.status(200).send({
-    message: 'Welcome to the first oficial pigeon club!',
-  }));
+  app.post('/api/users', userController.create);
 };
