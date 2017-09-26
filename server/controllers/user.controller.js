@@ -1,5 +1,6 @@
 'use strict';
 
+const passwordHash = require('password-hash');
 const { User } = require('../../config/db');
 const { messages } = require('./../helper');
 
