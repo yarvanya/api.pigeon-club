@@ -35,5 +35,23 @@ module.exports = {
         'error': error,
         'message': messages.userIsNotCreated
       }));
+  },
+
+  destroy(req, res) {
+    User.findById(req.params.id)
+    .then(user => {
+      user.destroy()
+      .then(user => res.status(200).json({
+        'message': messages.userDeleted
+      }))
+      .catch(error => res.status(400).json({
+        'error': error,
+        'message': messages.userNotDeleted
+      }))
+    })
+    .catch(error => res.status(404).json({
+      'message': messages.userNotFound
+    }))
   }
-};
+
+}
