@@ -1,5 +1,7 @@
 'use strict';
 
+const { hooks } = require('./../helper');
+
 module.exports  = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     email: {
@@ -41,6 +43,10 @@ module.exports  = (sequelize, DataTypes) => {
           hooks: true
         });
       }
+    },
+    hooks: {
+      beforeCreate: hooks.beforeCreate,
+      beforeUpdate: hooks.beforeUpdate
     }
   });
   return User;

@@ -1,5 +1,7 @@
 'use strict';
 
+const { hooks } = require('./../helper');
+
 module.exports = (sequelize, DataTypes) => {
   const Profile = sequelize.define('Profile', {
     firstName: {
@@ -35,7 +37,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     }
   }, {
-    timestamps: false
+    timestamps: false,
+    hooks: {
+      beforeCreate: hooks.beforeCreate,
+      beforeUpdate: hooks.beforeUpdate
+    }
   });
   return Profile;
 };
