@@ -6,16 +6,16 @@ module.exports = {
   up: (queryInterface, Sequelize) =>
     queryInterface.bulkInsert('Users', [
       {
-        email: 'bogdan.yarymovych@gmail.com',
-        password: passwordHash.generate('Qq@@11'),
+        email: 'ivan.yarymovych@gmail.com',
+        password: passwordHash.generate('Qq111'),
         isActivate: true,
         profileId: 1,
         createdAt: Date.now(),
         updatedAt: Date.now()
       },
       {
-        email: 'roma@gmail.com',
-        password: passwordHash.generate('Qq@@11'),
+        email: 'bogdan.yarymovych@gmail.com',
+        password: passwordHash.generate('Ww222'),
         isActivate: true,
         profileId: 2,
         createdAt: Date.now(),

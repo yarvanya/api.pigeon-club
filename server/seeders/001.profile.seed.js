@@ -4,7 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) =>
     queryInterface.bulkInsert('Profiles', [
       {
-        firstName: 'Bogdan',
+        firstName: 'Ivan',
         lastName: 'Yarymovych',
         birthDate: '1994-07-02',
         address: 'Sheptyckogo street, 46',
@@ -14,11 +14,11 @@ module.exports = {
         updatedAt: Date.now()
       },
       {
-        firstName: 'Roman',
-        lastName: 'Kulyk',
-        birthDate: '1996-06-17',
-        address: 'Nova street, 2',
-        city: 'Novyi Rozdil',
+        firstName: 'Bogdan',
+        lastName: 'Yarymovych',
+        birthDate: '1964-07-15',
+        address: 'Sheptyckogo street, 46',
+        city: 'Berezyna',
         country: 'Ukraine',
         createdAt: Date.now(),
         updatedAt: Date.now()
