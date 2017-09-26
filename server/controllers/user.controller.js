@@ -47,11 +47,11 @@ module.exports = {
       .catch(error => res.status(400).json({
         'error': error,
         'message': messages.userNotDeleted
-      }))
+      }));
     })
     .catch(error => res.status(404).json({
       'message': messages.userNotFound
-    }))
+    }));
   }
 
-}
+};
