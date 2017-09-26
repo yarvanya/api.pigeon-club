@@ -31,7 +31,9 @@ module.exports = {
   update(req, res) {
     Profile.findById(req.params.id)
     .then(profile => {
-      profile || res.status(404).json(messages.profileError);
+      profile || res.status(404).json({
+        'message': messages.profileError
+      });
       profile.updateAttributes(Object.assign({}, req.body))
       .then(profile => res.status(200).json({
         'profile': profile,
@@ -41,4 +43,5 @@ module.exports = {
     })
     .catch(error => res.status(400).send(error));
   }
-}
+
+};
